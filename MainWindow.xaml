@@ -52,7 +52,11 @@
                         <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
                         <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
                     </MenuItem>
-                    <MenuItem Header="Filled"/>
+                    <MenuItem Header="Filled">
+                        <MenuItem x:Name="lemonMenuItem" Header="Lemon"/>
+                        <MenuItem x:Name="chocolateMenuItem" Header="Chocolate"/>
+                        <MenuItem x:Name="vanillaMenuItem" Header="Vanilla"/>                        
+                    </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Stop"/>
 
