@@ -29,7 +29,7 @@
         <GroupBox x:Name="gbSale" Header="Current Sale" Margin="50,239,69,27" FontWeight="Bold">
             <Canvas>
                 <Label x:Name="lblQuantity" Content="Quantity" Canvas.Left="25" Canvas.Top="10"/>
-                <TextBox x:Name="txtQuantity" Canvas.Left="96" Canvas.Top="14" Text="0" TextWrapping="Wrap" Width="55"/>
+                <TextBox x:Name="txtQuantity" Canvas.Left="96" Canvas.Top="14" Text="0" TextWrapping="Wrap" Width="55" KeyUp="txtQuantity_KeyUp"/>
                 <Label x:Name="lblType" Content="Type" Canvas.Left="174" Canvas.Top="9"/>
                 <ComboBox x:Name="cmbType" Canvas.Left="222" Canvas.Top="12" Width="120"/>
                 <Label x:Name="lblPrice" Content="Price" Canvas.Left="389" Canvas.Top="10"/>
@@ -44,13 +44,13 @@
         </GroupBox>
         <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="131" Margin="0,26,0,0">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="_Doughnuts">
                 <MenuItem Header="Make">
                     <MenuItem Header="Raised">
-                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
-                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                        <MenuItem x:Name="glazedToolStripMenuItem"   Header="Glazed" Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar"  Click="sugarToolStripMenuItem_Click" IsCheckable="True"/>
                     </MenuItem>
                     <MenuItem Header="Filled">
                         <MenuItem x:Name="lemonMenuItem" Header="Lemon"/>
@@ -58,7 +58,7 @@
                         <MenuItem x:Name="vanillaMenuItem" Header="Vanilla"/>                        
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Stop"/>
+                <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click"/>
 
             </MenuItem>
                 
